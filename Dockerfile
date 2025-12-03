@@ -1,3 +1,2 @@
-FROM greyltc/archlinux-aur:latest
-USER root
-RUN pacman -Syu --noconfirm && aur-install plink plink1.9-git plink2-mkl-git snakemake vcftools bcftools
+FROM snakemake/snakemake:stable
+RUN micromamba install bioconda::plink bioconda::plink2 bioconda::vcftools bioconda::bcftools
